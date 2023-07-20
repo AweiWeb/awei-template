@@ -1,0 +1,9 @@
+.awei-input {
+  @apply border w-full border-gray-200 placeholder:text-xs rounded-sm py-1 px-2 outline-none focus:ring-1 ring-offset-2 ring-pink-400 duration-200 focus:border-white;
+}
+.awei-error {
+  @apply border rounded-md bg-purple-500 text-white text-xs px-2 py-1 mt-2;
+}
+.awei-button {
+  @apply bg-pink-400 py-2 rounded-md hover:bg-pink-300 duration-300;
+}
