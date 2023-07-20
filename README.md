@@ -10,9 +10,10 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## 主页示例
+<img width="1512" alt="image" src="https://github.com/AweiWeb/awei-template/assets/110518509/be325f3c-559d-4bff-82b8-6dbf6fe98d3e">
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## 登录示例
+<img width="1512" alt="image" src="https://github.com/AweiWeb/awei-template/assets/110518509/912f9cd3-7f47-4c63-97f8-a4bc8e0f1a07">
+
+
