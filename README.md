@@ -15,5 +15,7 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 
 ## 登录示例
 <img width="1512" alt="image" src="https://github.com/AweiWeb/awei-template/assets/110518509/912f9cd3-7f47-4c63-97f8-a4bc8e0f1a07">
+<img width="1512" alt="image" src="https://github.com/AweiWeb/awei-template/assets/110518509/69d9d9b0-f940-4212-849d-99eee51c2d0d">
+
 
 
