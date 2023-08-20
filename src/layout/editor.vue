@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
     editor
-    <router-view></router-view>
+    <div><router-view></router-view></div>
 </template>
 
 <style scoped lang="scss"></style>

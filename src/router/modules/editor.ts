@@ -12,9 +12,7 @@ export default {
       name: 'editor.markdown',
       path: 'markdown',
       component: () => import('@/view/editor/markdown.vue'),
-      meta: {
-        menu: { title: 'markdown' },
-      },
+      meta: { menu: { title: 'markdown' }, permissions: 'abc' },
     },
     {
       name: 'editor.base',

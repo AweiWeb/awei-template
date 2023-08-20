@@ -12,4 +12,5 @@ interface User {
   name: string;
   age: number;
   avatar: string;
+  permissions?: string[]
 }

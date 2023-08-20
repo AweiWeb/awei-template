@@ -27,7 +27,9 @@ watch(route, () => {
                 <router-view #default="{ Component }">
                     <Transition leave-active-class="animate__animated animate__fadeOutLeft"
                         enter-active-class="animate__animated animate__fadeInRight">
-                        <component :is="Component" class="w-full" />
+                        <div>
+                            <component :is="Component" class="w-full" />
+                        </div>
                     </Transition>
                 </router-view>
             </div>

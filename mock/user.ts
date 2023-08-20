@@ -12,6 +12,7 @@ export default [
           name: '伟伟web',
           age: 22,
           avatar: '/public/awei.jpg',
+          permissions: ['markDown', 'article']
         },
       };
     },

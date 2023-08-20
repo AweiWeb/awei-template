@@ -3,10 +3,10 @@ import { setupTailwindcss } from './tailwindcss';
 import setupElementPlugin from './element';
 import setupPiniaPlugin from './pinia';
 export function setupPlugin(app: App) {
+  setupPiniaPlugin(app);
   setupTailwindcss();
   setupComponentPlugin(app);
   setupElementPlugin(app);
-  setupPiniaPlugin(app);
 }
 
 /*

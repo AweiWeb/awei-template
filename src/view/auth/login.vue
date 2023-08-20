@@ -22,7 +22,7 @@ const loginBtn = async (values: any) => {
     <Form @submit="loginBtn" :validation-schema="schema">
         <div class="bg-slate-300 h-screen flex justify-center items-center p-5 md:p-0">
             <div
-                class="w-[720px] translate-y-2 md:translate-y-0 bg-white -translate-y-16 md:grid grid-cols-2 rounded-md shadow-md overflow-hidden">
+                class="w-[720px] translate-y-2 md:slate-y-0 bg-white -translate-y-16 md:grid grid-cols-2 rounded-md shadow-md overflow-hidden">
                 <div class="p-6 flex flex-col justify-between">
                     <div>
                         <h2 class="text-center text-gray-700 text-lg">用户登录</h2>

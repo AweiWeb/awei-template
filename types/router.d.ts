@@ -9,7 +9,7 @@ declare module 'vue-router' {
      */
     guest?: boolean;
     // 权限
-    permissions?: string[];
+    permissions?: string;
     // 子菜单
     menu?: IMenu;
   }

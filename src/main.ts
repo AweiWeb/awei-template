@@ -6,8 +6,9 @@ import '@/styles/global.min.css';
 import { setupPlugin } from './plugins';
 const app = createApp(App);
 async function RouterLoad() {
-  setupRouter(app);
   setupPlugin(app);
+  setupRouter(app);
+  await router.isReady()
   app.mount('#app');
 }
 RouterLoad();
