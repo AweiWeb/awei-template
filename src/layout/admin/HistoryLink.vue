@@ -11,7 +11,7 @@ console.log(useRoute().name);
             :class="{ 'bg-purple-300': item.route == $route.name }" v-for="item of NMenu.history.value" :key="item.title">
             <RouterLink :to="{ name: item.route }">{{
                 item.title
-            }}</RouterLink> <i class="fab fa-xbox"></i>
+            }}</RouterLink> <i class="fab fa-xbox" @click="NMenu.removeMenu(item)"></i>
         </div>
     </div>
 </template>

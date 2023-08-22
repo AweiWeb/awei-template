@@ -2,7 +2,11 @@ import { ref } from 'vue';
 import router from '@/router';
 import { store } from '@/utils';
 import { cacheToken } from '@/enum/cacheData';
-import { RouteLocationMatched, RouteLocationNormalized } from 'vue-router';
+import {
+  RouteLocationMatched,
+  RouteLocationNormalized,
+  RouteRecordRaw,
+} from 'vue-router';
 class Menu {
   public menus = ref<IMenu[]>([]);
   public history = ref<IMenu[]>([]);
@@ -10,8 +14,19 @@ class Menu {
   public route = ref(null as null | RouteLocationNormalized);
   constructor() {
     this.menus.value = this.getMenuRouter();
-    this.history.value = store.get(cacheToken.MENU_HIST) ?? [];
+    this.history.value = this.getHistoryRouter();
     console.log(this.history.value);
+  }
+  //获取历史路由
+  private getHistoryRouter() {
+    const routes = [] as RouteRecordRaw[];
+    router.getRoutes().map((item) => routes.push(...item.children));
+    let menus: IMenu[] = store.get(cacheToken.MENU_HIST) ?? [];
+    // 获取子路由然后进行过滤
+    // 历史菜单过滤掉加权限的路由，避免权限路由在历史的菜单中
+    return menus.filter((item) => {
+     return routes.some((route) => item.route === route.name)
+   });
   }
   toggleParent(menu: IMenu) {
     this.menus.value.forEach((b) => {
@@ -72,6 +87,8 @@ class Menu {
   removeMenu(menu: IMenu) {
     const index = this.history.value.indexOf(menu);
     this.history.value.splice(index, 1);
+    // 存储删除后的历史菜单数据
+    store.set(cacheToken.MENU_HIST, this.history.value)
   }
 }
 

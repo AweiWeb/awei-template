@@ -18,13 +18,13 @@ function autoload(router: Router) {
 
   routes = routes.map((route) => {
     // router.addRoute(route);
-    route.children?.filter((child) => {
+    route.children = route.children?.filter((child) => {
       const permission = child.meta?.permissions; //这里返回的是字符串
       // console.log(permission);
       return permission ? user.info?.permissions?.includes(permission) : true; //在用户返回的数据中提取数组对应的数据
     });
     console.log(route.children);
-    
+
     return route;
   });
   routes.forEach((item) => router.addRoute(item));
