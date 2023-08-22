@@ -1,6 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Editor from '@/components/markdown/editor.vue'
+</script>
 <template>
-    markdown
+    <Editor></Editor>
 </template>
 
 <style scoped lang="scss"></style>
