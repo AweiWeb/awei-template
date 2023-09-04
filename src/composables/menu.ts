@@ -3,7 +3,6 @@ import router from '@/router';
 import { store } from '@/utils';
 import { cacheToken } from '@/enum/cacheData';
 import {
-  RouteLocationMatched,
   RouteLocationNormalized,
   RouteRecordRaw,
 } from 'vue-router';

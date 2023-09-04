@@ -1,6 +1,6 @@
 import { cacheToken } from '@/enum/cacheData';
 import { userStore } from '@/store/user';
-import { MenuRouter } from '@/store/menu';
+// import { MenuRouter } from '@/store/menu';
 import { store } from '@/utils';
 // import { initData } from '@/utils/store';
 import { RouteLocationNormalized, Router } from 'vue-router';

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import router from '@/router';
+// import router from '@/router';
 import { RouteLocationNormalized } from 'vue-router';
 import { store } from '@/utils/index';
 import { cacheToken } from '@/enum/cacheData';

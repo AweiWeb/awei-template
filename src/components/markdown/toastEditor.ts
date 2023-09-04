@@ -21,7 +21,7 @@ export default class {
         // blob就是转化后的图片格式
         form.append('file', blob, blob.name);
         const response = await uploadImg(form);
-        console.log(response.result.url);
+        console.log(response.data.url);
 
         callback('/assets/1.png', blob.name);
       }

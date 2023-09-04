@@ -1,4 +1,5 @@
 // 表1
+import * as echarts from 'echarts'
 let base = +new Date(1968, 9, 3);
 let oneDay = 24 * 3600 * 1000;
 let date = [];

@@ -57,5 +57,5 @@ function getRouteModule(file: string, module: { [key: string]: any }) {
 //这里配置路由自动注册为可选项
 const routes =
   env.VITE_ROUTE_AUTO === true ? getRoutes() : ([] as RouteRecordRaw[]);
-// console.log(typeof routes);
+console.log(typeof routes);
 export default getRoutes;

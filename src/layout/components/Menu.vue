@@ -4,7 +4,7 @@
 import { useRouter } from 'vue-router';
 import NMenu from '@/composables/menu.ts'
 import { watch } from 'vue';
-const route = useRouter()
+const route = useRouter() as any
 watch(route, () => {
     NMenu.MenuHight(route)
 }, { immediate: true })

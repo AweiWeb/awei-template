@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue';
 import { options1, option2 } from './echart'
-
-
+import * as echarts from 'echarts'
 const CartList = ref<CardItem[]>([{
     title: 'Vue',
     price: 565470,
@@ -29,8 +28,8 @@ const CartList = ref<CardItem[]>([{
 
 // 基于准备好的dom，初始化echarts实例
 nextTick(() => {
-    echarts.init(document.getElementById('awei1')).setOption(options1)
-    echarts.init(document.getElementById('awei2')).setOption(option2)
+    echarts.init(document.getElementById('awei1') as HTMLDivElement).setOption(options1)
+    echarts.init(document.getElementById('awei2') as HTMLDivElement).setOption(option2)
 })
 </script>
 <template>

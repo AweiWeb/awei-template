@@ -2,6 +2,7 @@ import { defineConfig, ConfigEnv, loadEnv } from 'vite';
 import path from 'path';
 import { parseEnv } from './vite/utils';
 import setupPlugin from './vite/plugins';
+import { visualizer } from "rollup-plugin-visualizer";
 // https://vitejs.dev/config/
 // export default defineConfig({
 //   plugins: [vue()],
@@ -19,7 +20,7 @@ export default ({ command, mode }: ConfigEnv) => {
   const env = parseEnv(loadEnv(mode, root));
   console.log(env);
   return {
-    plugins: setupPlugin(isBuild, env),
+    plugins: [...setupPlugin(isBuild, env), visualizer()],
     resolve: {
       alias: {
         // 配置引入别名

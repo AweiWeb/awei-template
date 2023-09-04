@@ -1,4 +1,3 @@
-import { Random } from 'mockjs';
 import { MockMethod } from 'vite-plugin-mock';
 
 export default [
@@ -9,7 +8,7 @@ export default [
       return {
         code: 200,
         message: '上传成功',
-        result: {
+        data: {
           url: 'assets/1.jpg',
         },
       };
